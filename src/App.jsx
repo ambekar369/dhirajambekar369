@@ -3,12 +3,13 @@ import React, { useEffect } from "react";
 
 export const App = () => {
   useEffect(() => {
-    const lenis = new Lenis();
-
-
-    lenis.on('scroll', (e) => {
-      console.log(e);
+    const lenis = new Lenis({
+      // infinite: true,
     });
+
+    // lenis.on('scroll', (e) => {
+    //   console.log(e);
+    // });
 
     function raf(time) {
       lenis.raf(time);
@@ -16,13 +17,15 @@ export const App = () => {
     }
 
     requestAnimationFrame(raf);
-
   }, []);
 
   return (
     <div className="min-h-[500vh] bg-gray-900 text-white flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold">Smooth Scrolling with Lenis 🚀</h1>
-      <p className="mt-5 text-lg">Scroll down to see the smooth effect</p>
+      <div className="w-full h-screen bg-red-500"></div>
+      <div className="w-full h-screen bg-blue-500"></div>
+      <div className="w-full h-screen bg-green-500"></div>
+      <div className="w-full h-screen bg-yellow-500"></div>
+      <div className="w-full h-screen bg-purple-500"></div>
     </div>
   );
 };
