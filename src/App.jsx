@@ -1,5 +1,6 @@
 import Lenis from "lenis";
 import React, { useEffect } from "react";
+import Test from "./Animation/Test";
 
 export const App = () => {
   useEffect(() => {
@@ -20,12 +21,8 @@ export const App = () => {
   }, []);
 
   return (
-    <div className="min-h-[500vh] bg-gray-900 text-white flex flex-col items-center justify-center">
-      <div className="w-full h-screen bg-red-500"></div>
-      <div className="w-full h-screen bg-blue-500"></div>
-      <div className="w-full h-screen bg-green-500"></div>
-      <div className="w-full h-screen bg-yellow-500"></div>
-      <div className="w-full h-screen bg-purple-500"></div>
+    <div className="w-full h-screen bg-purple-300">
+      <Test />
     </div>
   );
 };
